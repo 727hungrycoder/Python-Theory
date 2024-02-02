@@ -1,0 +1,97 @@
+map() in Python Examples
+Demonstration of map() in Python
+In this example, we are demonstrating the map() function in Python.
+
+
+# Python program to demonstrate working
+# of map.
+ 
+# Return double of n
+def addition(n):
+    return n + n
+ 
+# We double all numbers using map()
+numbers = (1, 2, 3, 4)
+result = map(addition, numbers)
+print(list(result))
+Output
+[2, 4, 6, 8]
+
+
+map() with Lambda Expressions
+We can also use lambda expressions with map to achieve above result. In this example, we are using map() with lambda expression.
+
+
+# Double all numbers using map and lambda
+ 
+numbers = (1, 2, 3, 4)
+result = map(lambda x: x + x, numbers)
+print(list(result))
+Output
+[2, 4, 6, 8]
+
+Add Two Lists Using map and lambda
+In this example, we are using map and lambda to add two lists.
+
+
+# Add two lists using map and lambda
+ 
+numbers1 = [1, 2, 3]
+numbers2 = [4, 5, 6]
+ 
+result = map(lambda x, y: x + y, numbers1, numbers2)
+print(list(result))
+Output
+[5, 7, 9]
+
+Modify the String using map()
+In this example, we are using map() function to modify the string. We can create a map from an iterable in Python.
+
+
+# List of strings
+l = ['sat', 'bat', 'cat', 'mat']
+ 
+# map() can listify the list of strings individually
+test = list(map(list, l))
+print(test)
+Output
+[['s', 'a', 't'], ['b', 'a', 't'], ['c', 'a', 't'], ['m', 'a', 't']]
+
+
+if Statement with map()
+In the example, the double_even() function doubles even numbers and leaves odd numbers unchanged. The map() function is used to apply this function to each element of the numbers list, and an if statement is used within the function to perform the necessary conditional logic.
+
+
+# Define a function that doubles even numbers and leaves odd numbers as is
+def double_even(num):
+    if num % 2 == 0:
+        return num * 2
+    else:
+        return num
+ 
+# Create a list of numbers to apply the function to
+numbers = [1, 2, 3, 4, 5]
+ 
+# Use map to apply the function to each element in the list
+result = list(map(double_even, numbers))
+ 
+# Print the result
+print(result)  # [1, 4, 3, 8, 5]
+Output
+[1, 4, 3, 8, 5]
+
+
+
+Recursion in Python
+Read
+Courses
+Practice
+The term Recursion can be defined as the process of defining something in terms of itself. In simple words, it is a process in which a function calls itself directly or indirectly. 
+
+Advantages of using recursion
+
+A complicated function can be split down into smaller sub-problems utilizing recursion.
+Sequence creation is simpler through recursion than utilizing any nested iteration.
+Recursive functions render the code look simple and effective.
+
+
